@@ -14,10 +14,10 @@ env:
 
 jobs:
   build:
-    # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac. ubuntu-latest
+    # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac. ubuntu-latest, windows-latest
     # You can convert this to a matrix build if you need cross-platform coverage.
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -26,12 +26,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        echo %cd%
         cmake ..
-        dir
-        cd ..
-        echo %cd%
-        dir
 
     - name: Upload GitHub Actions artifact of vcpkg build
       uses: actions/upload-artifact@v2
