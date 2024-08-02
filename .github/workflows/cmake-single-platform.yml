@@ -31,13 +31,13 @@ jobs:
         dir
         cmake ..
         dir
-        cmake --build .
+        # cmake --build .
         dir
 
     - name: Upload GitHub Actions artifact of vcpkg build
       uses: actions/upload-artifact@v2
       with:
         name: blsd_win
-        path: ${{ github.workspace }}/build/
+        path: ${{ github.workspace }}
       
 
