@@ -24,9 +24,10 @@ jobs:
     - name: Build
       # Build your program with the given configuration
       run: |
-        mkdir ${{ github.workspace }}/build
+        # mkdir ${{ github.workspace }}/build
         dir
         cd build
+        dir
         cmake ..
         cmake --build .
 
