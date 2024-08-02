@@ -24,12 +24,15 @@ jobs:
     - name: Build
       # Build your program with the given configuration
       run: |
-        # mkdir ${{ github.workspace }}/build
+        dir
+        mkdir build
         dir
         cd build
         dir
         cmake ..
+        dir
         cmake --build .
+        dir
 
     - name: Upload GitHub Actions artifact of vcpkg build
       uses: actions/upload-artifact@v2
