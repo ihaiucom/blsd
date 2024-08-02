@@ -18,10 +18,7 @@ set( BLSD_SOURCES ${sources} )
 #file( GLOB_RECURSE REMOVE_CMAKE "${CMAKE_SOURCE_DIR}/build/*.cpp" )
 #list( REMOVE_ITEM sources "${REMOVE_CMAKE}" )
 
-find_package(ZLIB)
-if (ZLIB_FOUND)
-	include_directories(${ZLIB_INCLUDE_DIRS})
-endif()
+
 
 add_executable(${PROJECT_NAME} ${BLSD_INCLUDES} ${BLSD_SOURCES})
 
